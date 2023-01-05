@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Crie seu evento</title>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Create your event</h1>
+            <p>To create your event you need to fill out the form below, you can save the event and publish it later</p>
+        </header>
+        <form id="my-form">
+            <fieldset>
+                <div class="fieldset-wrapper">
+                        <legend>Event info</legend>
+                    <div class="input-wrapper">
+                        <label for="event-title">Event name <span>(min 8 characters)</span></label>
+                        <input type="text" id="event-title" required minlength="8"/>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-url">Event link <span>(website or social media page)</span></label>
+                        <input type="url" id="event-url" required/>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-whatsapp">Contact <span>(numbers only)</span></label>
+                        <input type="number" id="event-whatsapp" required/>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-info">More info</label>
+                        <textarea id="event-info"></textarea>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-category">Category</label>
+                        <select id="event-category">
+                            <option value="lecture">Lecture</option>
+                            <option value="podcast">Live podcast</option>
+                            <option value="mentorship">Mentorship</option>
+                            <option value="workshop">Workshop</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="fieldset-wrapper">
+                    <legend>Organizer details</legend>
+                    <div class="input-wrapper">
+                        <label for="event-email">Organizer's email <span>(use a valid email)</span></label>
+                        <input type="email" id="event-email" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-password">Keyword to access the event <span>(min 8 characters)</span></label>
+                        <input type="password" id="event-password" required minlength="8">
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="event-private">
+                        <label for="event-private">Registration via email required</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="fieldset-wrapper">
+                    <legend>Date and time</legend>
+                    <div class="date-container">
+                        <div class="input-wrapper">
+                            <label for="event-date">Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="event-start">from</label>
+                            <input type="time">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="event-end">to</label>
+                            <input type="time">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <footer>
+            <input class="button" type="submit" form="my-form" value="Save">
+        </footer>
+    </div>
+    
+</body>
+</html>
